@@ -3,7 +3,6 @@ from skimage import data
 import napari
 import os
 import numpy as np
-#import PyQt5
 import PyQt5
 import PIL
 from PIL import Image
@@ -52,7 +51,7 @@ for file in os.listdir(directory):
 
 napari.run()
 """
-directory = 'C:\\Users\\andrewss\\PycharmProjects\\pythonProject\\JW_R03_nerve_stack'
+directory = 'C:\\Users\\NEIMO Lab\\PycharmProjects\\Napari\\JW_R03_nerve_stack'
 viewer = napari.Viewer()
 counter = 0
 photo_arrays = list() * 153
@@ -112,4 +111,5 @@ nparry = np.array(photo_arrays)
 
 print(nparry.shape)
 new_layer = viewer.add_image(nparry)
+new_layer.colormap = 'green'
 napari.run()
